@@ -18,10 +18,10 @@ def KronDelta(A, B):
 def AverageAngleMethod(MD, Inc, Azim, **kwargs):
 
     # If angles are listed in units of degree then change to radians
-    if(kwargs['AngleUnits'] == 'degrees'):
-
-        Inc = (np.pi/180.)*Inc
-        Azim = (np.pi/180.)*Azim
+    if "AngleUnits" in kwargs.keys():
+        if kwargs["AngleUnits"]  == 'degrees':
+            Inc = (np.pi/180.)*Inc
+            Azim = (np.pi/180.)*Azim
 
     NextMD = np.append(MD[1:], np.nan)
     NextInc = np.append(Inc[1:], np.nan)
@@ -41,10 +41,10 @@ def AverageAngleMethod(MD, Inc, Azim, **kwargs):
 def BalancedTangentialMethod(MD, Inc, Azim, **kwargs):
 
     # If angles are listed in units of degree then change to radians
-    if(kwargs['AngleUnits'] == 'degrees'):
-
-        Inc = (np.pi/180.)*Inc
-        Azim = (np.pi/180.)*Azim
+    if "AngleUnits" in kwargs.keys():
+        if kwargs["AngleUnits"]  == 'degrees':
+            Inc = (np.pi/180.)*Inc
+            Azim = (np.pi/180.)*Azim
 
     NextMD = np.append(MD[1:], np.nan)
     NextInc = np.append(Inc[1:], np.nan)
@@ -64,10 +64,10 @@ def BalancedTangentialMethod(MD, Inc, Azim, **kwargs):
 def RadiusOfCurvatureMethod(MD, Inc, Azim, **kwargs):
 
     # If angles are listed in units of degree then change to radians
-    if(kwargs['AngleUnits'] == 'degrees'):
-
-        Inc = (np.pi/180.)*Inc
-        Azim = (np.pi/180.)*Azim
+    if "AngleUnits" in kwargs.keys():
+        if kwargs["AngleUnits"]  == 'degrees':
+            Inc = (np.pi/180.)*Inc
+            Azim = (np.pi/180.)*Azim
 
     NextMD = np.append(MD[1:], np.nan)
     NextInc = np.append(Inc[1:], np.nan)
@@ -99,10 +99,11 @@ def RadiusOfCurvatureMethod(MD, Inc, Azim, **kwargs):
 def MinimumCurvatureMethod(MD, Inc, Azim, **kwargs):
 
     # If angles are listed in units of degree then change to radians
-    if(kwargs['AngleUnits'] == 'degrees'):
-
-        Inc = (np.pi/180.)*Inc
-        Azim = (np.pi/180.)*Azim
+    #if(kwargs['AngleUnits'] == 'degrees'):
+    if "AngleUnits" in kwargs.keys():
+        if kwargs["AngleUnits"]  == 'degrees':
+            Inc = (np.pi/180.)*Inc
+            Azim = (np.pi/180.)*Azim
 
     NextMD = np.append(MD[1:], np.nan)
     NextInc = np.append(Inc[1:], np.nan)
